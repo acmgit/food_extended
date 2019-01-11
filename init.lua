@@ -62,7 +62,7 @@ if minetest.get_modpath("food") then
 
         })
     end)
-
+    
     food.module("gingerbread_sam_raw",function()
         minetest.register_craftitem("food_extend:gingerbread_sam_raw", {
             description = S("Gingerbread Sam (raw)"),
@@ -74,11 +74,11 @@ if minetest.get_modpath("food") then
             output = "food_extend:gingerbread_sam_raw 5",
             recipe = {
                         {"group:food_honey","dye:red","group:food_honey"},
-                        {"group:food_sugar","group:flour","cucina_vegana:sunflower_seeds"},
+                        {"group:food_sugar","group:food_flour","cucina_vegana:sunflower_seeds"},
                         {"dye:green","group:food_egg","food_extend:baking_powder"}
                       },
             replacements = {
-                            {"group:food_honey", "vessels:glass_bottle"}
+                            {"bees:bottle_honey", "vessels:glass_bottle 2"}
                            }
 
         })
