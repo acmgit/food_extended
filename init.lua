@@ -53,7 +53,7 @@ if minetest.get_modpath("food") then
             output = "food_extend:gingerbread_sam_raw 5",
             recipe = {
                         {"bees:bottle_honey","dye:red","bees:bottle_honey"},
-                        {"group:food_sugar","farming:flour","cucina_vegana:sunflower_seeds"},
+                        {"group:food_sugar","group:food_flour","cucina_vegana:sunflower_seeds"},
                         {"dye:green","group:food_egg","food_extend:baking_powder"}
                       },
             replacements = {
@@ -74,7 +74,7 @@ if minetest.get_modpath("food") then
             output = "food_extend:gingerbread_sam_raw 5",
             recipe = {
                         {"group:food_honey","dye:red","group:food_honey"},
-                        {"group:food_sugar","farming:flour","cucina_vegana:sunflower_seeds"},
+                        {"group:food_sugar","group:flour","cucina_vegana:sunflower_seeds"},
                         {"dye:green","group:food_egg","food_extend:baking_powder"}
                       },
             replacements = {
