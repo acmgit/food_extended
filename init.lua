@@ -148,7 +148,7 @@ if minetest.get_modpath("food") then
         output = "food_extend:rice_grapes_plate_raw",
         recipe = {
                     {"group:food_honey","farming:grapes"},
-                    {"group:food_salt","cucina_vegana:bowl_rice"},
+                    {"group:food_salt","group:food_rice"},
                     {"group:food_meat","cucina_vegana:plate"}
                 },
         replacements = {
