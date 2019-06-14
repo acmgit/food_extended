@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-21 13:43+0200\n"
+"POT-Creation-Date: 2019-06-14 16:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,4 +47,24 @@ msgstr ""
 
 #: init.lua
 msgid "Coleslaw with Fruits"
+msgstr ""
+
+#: init.lua
+msgid "Tofu-Cutlet (raw)"
+msgstr ""
+
+#: init.lua
+msgid "Tofu-Cutlet"
+msgstr ""
+
+#: init.lua
+msgid "Cucumber noodles with peanutbutter"
+msgstr ""
+
+#: init.lua
+msgid "Apple-Peanutbutter Muffin (raw)"
+msgstr ""
+
+#: init.lua
+msgid "Apple-Peanutbutter Muffin"
 msgstr ""

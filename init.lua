@@ -78,7 +78,7 @@ if minetest.get_modpath("food") then
                         {"dye:green","group:food_egg","food_extend:baking_powder"}
                       },
             replacements = {
-                            {"bees:bottle_honey", "vessels:glass_bottle 2"}
+                            {"group:food_honey", "vessels:glass_bottle 2"}
                            }
 
         })
@@ -193,9 +193,97 @@ if minetest.get_modpath("food") then
                            }
         })
     end)
+
+    food.module("tofu_cutlet_raw",function()
+    minetest.register_craftitem("food_extend:tofu_cutlet_raw", {
+        description = S("Tofu-Cutlet (raw)"),
+        inventory_image = "food_extend_tofu_cutlet_raw.png",
+        --on_use = food.item_eat(6),
+        groups = {food = 1}
+    })
+    food.craft({
+        output = "food_extend:tofu_cutlet_raw",
+        recipe = {
+                    {"cucina_vegana:peanut", "farming:chili_pepper","farming:onion"},
+                    {"cucina_vegana:lettuce","cucina_vegana:tofu", "group:food_rice"},
+                    {"","cucina_vegana:plate", ""}
+                },
+        })
+    end)
+    
+    food.module("tofu_cutlet",function()
+        minetest.register_craftitem("food_extend:food_tofu_cutlet", {
+            description = S("Tofu-Cutlet"),
+            inventory_image = "food_extend_tofu_cutlet.png",
+            on_use = food.item_eat(7),
+            groups = {food = 1}
+        })
+    end)
+
+    minetest.register_craft({
+        type = "cooking",
+        cooktime = 15,
+        output = "food_extend:tofu_cutlet",
+        recipe = "food_extend:tofu_cutlet_raw"
+    })    
+
+    food.module("cucumber_noodles_with_peanutbutter",function()
+    minetest.register_craftitem("food_extend:cucumber_noodles_with_peanutbutter", {
+        description = S("Cucumber noodles with peanutbutter"),
+        inventory_image = "food_extend_cucumber_noodles_with_peanutbutter.png",
+        on_use = food.item_eat(8),
+        groups = {food = 1}
+    })
+    food.craft({
+        output = "food_extend:cucumber_noodles_with_peanutbutter",
+        recipe = {
+                    {"farming:cucumber", "farming:carrot","cucina_vegana:peanut"},
+                    {"","cucina_vegana:peanut_butter", ""},
+                    {"","group:food_bowl", ""}
+                },
+        })
+    end)
+
+    food.module("apple_peanutbutter_muffin_dough",function()
+    minetest.register_craftitem("food_extend:apple_peanutbutter_muffin_dough", {
+        description = S("Apple-Peanutbutter Muffin (raw)"),
+        inventory_image = "food_extend_apple_peanutbutter_muffin_dough.png",
+        groups = {food = 1}
+    })
+    food.craft({
+        output = "food_extend:apple_peanutbutter_muffin_dough",
+        recipe = {
+                    {"default:apple", "cucina_vegana:peanut_butter","group:food_flour"},
+                    {"cucina_vegana:peanut","cucina_vegana:soy_milk", "food_extend:baking_powder"},
+                    {"default:paper","default:paper", "default:paper"}
+                },
+        replacements = {
+                        {"cucina_vegana:peanut_butter", "vessels:glass_bottle"},
+                        {"cucina_vegana:soy_milk", "vessels:drinking_glass"}
+                    }
+        })               
+    end)
+    
+    food.module("apple_peanutbutter_muffin",function()
+        minetest.register_craftitem("food_extend:apple_peanutbutter_muffin", {
+            description = S("Apple-Peanutbutter Muffin"),
+            inventory_image = "food_extend_apple_peanutbutter_muffin.png",
+            on_use = food.item_eat(5),
+            groups = {food = 1}
+        })
+    end)
+
+    minetest.register_craft({
+        type = "cooking",
+        cooktime = 12,
+        output = "food_extend:apple_peanutbutter_muffin 6",
+        recipe = "food_extend:apple_peanutbutter_muffin_dough"
+    })
+    
+    dofile(MP .. "/register_mods.lua")
     
     print("[MOD] " .. minetest.get_current_modname() .. "successfully loaded.")
-    
+           
 else -- if(minetest.get_modpath
            
     print("[MOD] " .. minetest.get_current_modname() .. "not loaded. Missing mod food!")
