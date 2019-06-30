@@ -53,3 +53,19 @@ if(minetest.get_modpath("diet")) then
     end -- for key,item
         
 end -- if(minetest.get_modpath("diet
+
+--   *******************************************
+--   *****           Petz-Support          ***** 
+--   *******************************************
+
+if(minetest.get_modpath("petz")) then
+
+    minetest.override_item("petz:chicken_egg", {
+                                                groups = {flammable = 2, food = 2, food_egg = 1}
+                                               })
+    
+    minetest.override_item("petz:duck_egg", {
+                                                groups = {flammable = 2, food = 2, food_egg = 1}
+                                               })
+
+end

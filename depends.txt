@@ -5,3 +5,4 @@ farming?
 bees?
 intllib?
 food_sweet?
+petz?
