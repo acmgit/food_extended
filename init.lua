@@ -1,9 +1,16 @@
+local modpath = minetest.get_modpath(minetest.get_current_modname())
+local modname = minetest.get_current_modname()
 
--- Load support for intllib.
-local MP = minetest.get_modpath(minetest.get_current_modname())
-local S, NS = dofile(MP.."/intllib.lua")
+if(minetest.get_modpath("intllib")) then
+    S = dofile(modpath .."/intllib.lua")
+    print("[MOD] " .. modname .. ": translating in intllib-mode.")
 
+else
+    S = minetest.get_translator("food_extend")
+    print("[MOD] " .. modname .. ": translating in minetest-mode.")
 
+end -- if(minetest.get_modpath(
+    
 if minetest.get_modpath("food") then
     
     food.module("rujak",function()
