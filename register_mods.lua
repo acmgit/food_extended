@@ -53,3 +53,17 @@ if(minetest.get_modpath("diet")) then
     end -- for key,item
         
 end -- if(minetest.get_modpath("diet
+
+--   **********************************************
+--   *****           Hunger_ng-Support        *****
+--   **********************************************
+
+if(minetest.get_modpath("hunger_ng")) then
+    local add = hunger_ng.add_hunger_data
+
+    for key, item in pairs(food_items) do
+        add(item[1], {satiates = item[2], returns = item[3], heals = math.floor((item[5] or 0)), timeout = 0})
+
+    end -- for key, data
+
+end -- hunger_ng

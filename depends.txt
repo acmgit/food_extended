@@ -6,3 +6,7 @@ bees?
 intllib?
 food_sweet?
 petz?
+hunger_ng?
+hunger?
+diet?
+hbhunger?
