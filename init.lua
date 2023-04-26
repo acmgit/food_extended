@@ -49,6 +49,19 @@ if minetest.get_modpath("food") then
         })
     end)
 
+    food.module("baking_powder",function()
+        minetest.register_craftitem("food_extend:baking_powder", {
+            description = S("Baking Powder"),
+            inventory_image = "food_extend_baking_powder.png",
+            groups = {food = 1}
+        })
+        food.craft({
+            output = "food_extend:baking_powder",
+            recipe = {
+                        {"group:food_salt","cucina_vegana:rice_starch","group:food_sugar"},
+                    },
+        })
+    end)
 
     food.module("gingerbread_sam_raw",function()
         minetest.register_craftitem("food_extend:gingerbread_sam_raw", {
@@ -155,7 +168,7 @@ if minetest.get_modpath("food") then
     food.craft({
         output = "food_extend:rice_grapes_plate_raw",
         recipe = {
-                    {"group:food_honey","farming:grapes"},
+                    {"group:food_honey","cucina_vegana:grape"},
                     {"group:food_salt","group:food_rice"},
                     {"group:food_meat","cucina_vegana:plate"}
                 },
