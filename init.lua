@@ -24,7 +24,7 @@ if minetest.get_modpath("food") then
         food.craft({
             output = "food_extend:rujak",
             recipe = {
-                        {"farming:cucumber","group:food_orange","cucina_vegana:banana"},
+                        {"farming:cucumber","group:food_orange","farming_plus:banana"},
                         {"farming:chili_pepper","moretrees:raw_coconut","group:food_carrot"},
                         {"","group:food_bowl",""}
                     }
@@ -131,7 +131,7 @@ if minetest.get_modpath("food") then
         food.craft({
             output = "food_extend:tofufruitcreme",
             recipe = {
-                        {"cucina_vegana:banana","cucina_vegana:tofu","default:apple"},
+                        {"farming_plus:banana","cucina_vegana:tofu","default:apple"},
                         {"","group:food_bowl",""}
                     }
         })
